@@ -1,0 +1,725 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*border: solid 1px rgb(255, 90, 0);*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* TUDO QUE ESTÁ DENTRO DE BODY */
+
+body {
+    background-color: rgb(206, 21, 21);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Avenir Next', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+body h1 {
+    font-size: 40px;
+}
+
+body h2 {
+    font-size: 28px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+body .fundo {
+    background-image: url(simbolos.jpg);
+    background-repeat: repeat;
+    background-size: 20%;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.temporario {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+/* TUDO QUE ESTÁ DENTRO DE HEADER */
+
+header {
+    background-image: linear-gradient(to top, rgb(244, 241, 235, 1) 0px, rgb(0, 0, 0, 0) 400px), url(bannerheader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 1080px;
+    opacity: 1;
+    padding: 40px 15%;
+    position: relative;
+    width: 100%;
+}
+
+.headertopo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.headertopo a img {
+    height: 150px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+    height: fit-content;
+    position: fixed;
+    right: 15%;
+    transition: 0.3s ease;
+    width: fit-content;
+    z-index: 1000;
+}
+
+nav.fundonav {
+    background-color: rgb(11, 11, 11);
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    transition: ease 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.headermeio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.headermeio h1 {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.headermeio p {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.headermeio p span {
+    color: red;
+    text-shadow: 1px 1px 1px rgba(168, 0, 0, 1);
+}
+
+.headermeiobotoes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+}
+
+.botao1 {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.botao1 div {
+    align-items: center;
+    background-color: rgb(168, 0, 0);
+    border-radius: 318px;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: center;
+    position: relative;
+    transition: ease 0.3s;
+    width: 318px;
+}
+
+.botao1 div p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+.botao1:hover div {
+    background-color: red;
+}
+
+.botao2 {
+    text-decoration: none;
+}
+
+.botao2 div {
+    align-items: center;
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 300px;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: center;
+    position: relative;
+    transition: ease 0.3s;
+    width: 318px;
+}
+
+.botao2 div p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+.botao2:hover div {
+    background-color: rgb(255, 255, 255);
+}
+
+.botao2:hover div p {
+    color: rgb(0, 0, 0);
+}
+
+.headerbase {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+}
+
+.headerbase h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+.atributos {
+    align-items: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+.atributos div {
+    max-width: 200px;
+}
+
+.atributos h1 {
+    font-size: 1.5rem;
+}
+
+.atributos p {
+    font-size: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* TUDO QUE ESTÁ DENTRO DE MAIN */
+
+main {
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(244, 241, 235, 1) 0px, rgb(244, 241, 235, 0.95) 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    opacity: 1;
+    padding: 40px 20% 40px 20%;
+    position: relative;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.historia {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.redacao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.redacao p {
+    text-align: justify;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+.linhadotempo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.linha {
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 135px;
+    height: auto;
+    justify-content: center;
+    position: relative;
+    width: 2px;
+}
+
+.linha div {
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 15px;
+    width: 15px;
+}
+
+.acontecimentosesquerda,
+.acontecimentosdireita {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.conteudoesquerda,
+.conteudodireita {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.conteudoesquerda p,
+.conteudodireita p {
+    align-items: center;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    max-height: 150px;
+    max-width: 350px;
+    opacity: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    pointer-events: none;
+    position: absolute;
+    text-align: justify;
+    transition: 0.3s ease;
+    width: 350px;
+}
+
+.conteudoesquerda p {
+    right: 220px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+    transform: translateX(220px);
+}
+
+.conteudoesquerda:hover p {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.conteudodireita p {
+    left: 220px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+    transform: translateX(-220px);
+}
+
+.conteudodireita:hover p {
+    opacity: 1;
+    transform: translateX(-0px);
+}
+
+.conteudodireita:hover {
+    transform: scale(1.1) translateX(10%);
+}
+
+.conteudoesquerda:hover {
+    transform: scale(1.1) translateX(-10%);
+}
+
+.conteudoesquerda img,
+.conteudodireita img {
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0)) drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0));
+    height: 150px;
+    width: 200px;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.dataesquerda,
+.datadireita {
+    color: rgb(168, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    min-width: 200px;
+    position: relative;
+}
+
+.dataesquerda {
+    align-items: end;
+}
+
+.datadireita {
+    align-items: baseline;
+}
+
+#historia {}
+
+.arte {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+#arte {}
+
+.exposicao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+.exposicao p {
+    text-align: justify;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+.container-quiz {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: 50%;
+}
+
+.controle-navegacao,
+.controle-resposta {
+    display: none;
+    /* esconder as bolinhas dos radios */
+}
+
+.cartao-pergunta {
+    display: none;
+    /* esconde todos por padrão */
+}
+
+.cartao-pergunta p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.cabecalho-quiz {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho-quiz h3 {
+    color: rgb(0, 0, 0);
+}
+
+.seta-navegacao {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+    /* para impedir interações de seleção com cursor */
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.seta-navegacao:hover {
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+
+/* navegar e trocar pergunta */
+#pergunta1:checked~.container-quiz #p1,
+#pergunta2:checked~.container-quiz #p2,
+#pergunta3:checked~.container-quiz #p3,
+#pergunta4:checked~.container-quiz #p4,
+#pergunta5:checked~.container-quiz #p5,
+#pergunta6:checked~.container-quiz #p6,
+#pergunta7:checked~.container-quiz #p7,
+#pergunta8:checked~.container-quiz #p8,
+#pergunta9:checked~.container-quiz #p9,
+#pergunta10:checked~.container-quiz #p10 {
+    display: block;
+    /* faz um cartão ativar. lembrando que todos os cartões ficam desativados por padrão*/
+}
+
+.lista-respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcao {
+    background-color: rgba(255, 255, 255, 1);
+    border: solid rgba(0, 0, 0, 0) 2px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: block;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+/* mudança de cor da opção correta quando um radio for marcado dentro daquela pergunta */
+.cartao-pergunta:has(.controle-resposta:checked) .opcao-correta {
+    background-color: rgba(168, 0, 0, 1);
+    color: rgb(255, 255, 255);
+    opacity: 0.75;
+}
+
+/* mudança de cor das opções erradas quando um radio for marcado dentro daquela pergunta */
+.cartao-pergunta:has(.controle-resposta:checked) .opcao-errada {
+    background-color: rgba(50, 50, 50, 1);
+    color: rgb(255, 255, 255);
+    opacity: 0.75;
+}
+
+.controle-resposta:hover+.opcao {
+    border: solid rgb(0, 0, 0) 2px !important;
+    opacity: 1 !important;
+}
+
+.controle-resposta:checked+.opcao {
+    border: solid rgb(255, 255, 255) 2px !important;
+    opacity: 1 !important;
+}
+
+/* muda o cursor e interações com os radios das respostas. impede mudar resposta depois de escolher uma */
+.cartao-pergunta:has(.controle-resposta:checked) .lista-respostas {
+    pointer-events: none;
+}
+
+.lugares {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.cartao-mapa {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.cartao-mapa p {
+    align-items: center;
+    color: black;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    overflow-wrap: break-word;
+    text-align: justify;
+    width: auto;
+}
+
+.cartao-mapa img {
+    border-radius: 10px;
+    border: solid 2px rgba(168, 0, 0, 1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    height: 300px;
+    object-fit: cover;
+    width: 300px;
+}
+
+.mapa {
+    border-radius: 10px;
+    border: solid white 2px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    height: 300px;
+    width: 400px;
+    min-width: 500px;
+}
+
+#lugares {}
+
+/* TUDO QUE ESTÁ DENTRO DE FOOTER */
+
+footer {
+    align-items: center;
+    background-color: rgb(11, 11, 11);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 20px;
+    justify-content: center;
+    min-height: 270px;
+    opacity: 1;
+    padding: 0 15%;
+    position: relative;
+    width: 100%;
+}
+
+.footertopo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.creditoscontatos {
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 33%;
+    position: relative;
+}
+
+.creditoscontatos ul {
+    list-style-type: none;
+}
+
+.creditoscontatos ul li {
+    opacity: 0.5;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    transition: ease 0.3s;
+}
+
+.creditoscontatos ul li:hover {
+    opacity: 1;
+}
+
+.footertopo a img {
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 1)) drop-shadow(-1px -1px 10px rgba(0, 0, 0, 1));
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.footertopo a img:hover {
+    transform: scale(1.05);
+}
+
+
+.linksfooter {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 33%;
+    position: relative;
+}
+
+.linksfooter ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.linksfooter a {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    opacity: 0.5;
+    text-decoration: none;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    transition: ease 0.3s;
+}
+
+.linksfooter a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.linhafooter {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 135px;
+    height: 1px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footerbase {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.footerbase p {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    opacity: 0.5;
+    transition: ease 0.3s;
+}
+
+.footerbase p:hover {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
